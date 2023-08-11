@@ -1,0 +1,85 @@
+$font-title: 'Russo One', sans-serif;
+$font-basic: 'PT Sans', sans-serif;
+
+
+
+//Title Russo One
+
+@mixin toptitle {
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+@mixin toptitlesdp {
+    font-size: 4rem;
+    line-height: 100%; 
+}
+@mixin alltitle {
+    font-size: 1.5rem; 
+    line-height: 120%; 
+}
+@mixin alltitletb {
+    font-size: 2rem;
+    line-height: 120%; 
+}
+@mixin alltitledp {
+    font-size: 2.5rem;  
+    line-height: 120%; 
+}
+
+//PT Sans
+
+@mixin subtitle {
+    font-size: 1.125rem;  
+    line-height: 120%;
+}
+@mixin subtitledp {
+    font-size: 1.25rem; 
+    line-height: 120%;
+}
+@mixin subtitletb {
+    font-size: 1.75rem;  
+    font-weight: 700;
+    line-height: 130%; 
+}
+@mixin game {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+@mixin gamedp {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+@mixin gamesummary {
+    font-size: 1rem;
+    line-height: 120%;
+}
+@mixin games {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 130%; 
+}
+@mixin gamesdp {
+    font-size: 2rem;  
+    font-weight: 700;
+    line-height: 130%; 
+}
+@mixin section {
+    font-size: 0.75rem;   
+    font-weight: 700;
+    line-height: 120%; 
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+}
+@mixin sectiondp {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 120%; 
+    letter-spacing: 0.0875em;
+    text-transform: uppercase;
+}
+@mixin documents {
+    font-size: 0.875rem;
+    line-height: 120%;
+}
