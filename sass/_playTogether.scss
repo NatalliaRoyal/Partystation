@@ -1,0 +1,91 @@
+@media screen and (min-width: 360px) {
+
+    .together {
+        background: $background-global-color;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .together__banner {
+        width: 100%;
+    }
+
+    .together__header {
+        @include section;
+        font-family: $font-basic;
+        border-radius: 3rem;
+        border: 0.0625rem solid $header-input-color;
+        color: $font-global-color;
+        opacity: 0.6;
+        padding: 0.5rem 1rem 0.4375rem 1rem;
+        margin-top: 4rem;
+    }
+
+    .together__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+
+    .together__head {
+        @include alltitle;
+        font-family: $font-title;
+        color: $font-global-color;
+        margin-top: 2rem;
+    }
+
+    .together__content__p {
+        @include alltitle;
+        font-family: $font-basic;
+        color: $font-global-color;
+        padding: 5.5rem 0  ;
+    }
+
+    .together__content__ellipse {
+        position: absolute;
+        opacity: 0.5;
+    }
+
+    .together__content__switch {
+        display: flex;
+        width: 20.5rem;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7.875rem;
+    }
+
+    .together__play {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $font-global-color;
+        @include subtitledp;
+        font-family: $font-basic;
+    }
+
+    .together__play__head {
+        @include gamedp;
+        font-family: $font-basic;
+        color: $font-global-color;
+        margin-top: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .together__play__button {
+        border: 0;
+        width: 20.5625rem;
+        height: 3rem;
+        border-radius: 3.5rem;
+        background: $header-button-color;
+        padding: 1rem 2.5rem;
+        color: $font-global-color;
+        @include gamesummary;
+        font-family: $font-basic;
+    }
+
+    .together__btn__play {
+        display: none;
+    }
+
+
+}
