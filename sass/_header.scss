@@ -1,0 +1,261 @@
+.header {
+    background-color: $background-global-color;
+   
+}
+.header_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 1rem;
+}
+.logogames {
+    height: 2,8125rem;
+    width: 5.9375rem;
+}
+.menu {
+    padding: 0.75rem;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+.menu__btn {
+    display: flex; 
+    align-items: center;  
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background-color: $header-input-color;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 50%;
+    margin: 0;
+    padding-left: 1.75rem;
+    list-style: none;
+    text-align: center;
+    background-color: $background-block-color;
+    opacity: 0.8;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+ 
+  .menu__about {
+    display: block;
+    color: $font-global-color;
+    font-family: $font-basic;
+    @include gamesummary; 
+    text-decoration: none;
+    padding: 1.5rem;
+  }
+  .menu__vacancies {
+    display: block;
+    color: $font-global-color;
+    font-family: $font-basic;
+    @include gamesummary; 
+    text-decoration: none;
+  }
+  .menu__startplay {
+    display: block;
+    color: $font-global-color;
+    font-family: $font-basic;
+    @include gamesummary; 
+    text-decoration: none;
+    padding: 1.5rem;
+  }
+  .menu__item:hover {
+    background-color: $header-input-color;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
+
+.title__top>span {
+    background: $background-global-gradient-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title__top {
+    color: $font-global-color;
+    font-family: $font-title;
+    @include toptitle;
+}
+.title__subtitle {
+    color: $font-global-color;
+    font-family: $font-basic;
+    @include subtitle;
+    font-feature-settings: 'ss05' on;
+}
+.title__subtitle>span {
+    color: $font-color;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    width: 19.5625rem;
+}
+.gamesform {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 13.4375rem;
+    background: url(/images/header/header-bg-img.png) no-repeat center, 
+    url(/images/header/header-img2.svg) no-repeat right top,
+    url(/images/header/header-img1.svg) no-repeat left center;
+}
+.gamesform__container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    
+    }
+.gamesform__email {
+    font-family: $font-basic;
+   @include subtitle;
+   color: $font-global-color;
+   padding-left: 1.5rem;
+    flex-grow: 4;
+    gap: 0.5rem;
+    border-radius: 8.5rem;
+    border: none;
+    background: var(--white-20, $header-input-color);
+    backdrop-filter: blur(1.75rem);
+    font-feature-settings: 'ss05' on;
+}
+
+.gamesform__arrow {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 8.5rem;
+    backdrop-filter: blur(1.75rem);
+    background: var(--white-20, $header-input-color);
+}
+.gamecards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+.games__img {
+    width: 20.5rem;
+    height: 12.5rem;
+    border-radius: 1rem;
+}
+.games__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.games__subtitle {
+    color: $font-global-color;
+    @include game;
+    font-feature-settings: 'ss05' on;
+    font-family: $font-basic;
+}
+.games__summary {
+    color: $font-global-color;
+    opacity: 0.4;
+    @include gamesummary;
+    font-feature-settings: 'ss05' on;
+    font-family: $font-basic;
+}
+
+.gamecards {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.gamecards__carusel {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s;
+}
+.games {
+    flex: 1;
+}
+
+
+.header__banner {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+
+    .header {
+       padding: 0 2.5rem 0 2.5rem;
+    }
+    
+    .title__top {
+        font-family: $font-title;
+        @include toptitlesdp;
+    }
+    .title__subtitle {
+        font-family: $font-title;
+        @include subtitledp;
+    }
+
+    .header__banner {
+        border-radius: 1.5rem;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+	.header_logo {
+        display: flex;
+        flex-direction: column;
+    }
+    .logogames {
+        display: flex;
+        justify-content: center;
+    }
+    
+}

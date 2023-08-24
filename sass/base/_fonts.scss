@@ -29,7 +29,8 @@ $font-basic: 'PT Sans', sans-serif;
 //PT Sans
 
 @mixin subtitle {
-    font-size: 1.125rem;  
+    font-size: 1.125rem; 
+    font-weight: 400;
     line-height: 120%;
 }
 @mixin subtitledp {
